@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readish</title>
+    <link rel="stylesheet" href="css/readish.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">📚 Readish</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Where Stories Find Their People</h1>
+                <p>Search and discover books in seconds with our easy-to-use Book finder</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search by title, author, or keyword..." id="searchInput">
+                        <button class="search-btn" id="searchBtn">Search Books</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="details">
+            <div class="container">
+                <h2>Why Choose BookFinder?</h2>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Smart Search</h3>
+                        <p>Find books by title, author, ISBN, or keywords with lightning-fast results</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📖</div>
+                        <h3>Rich Details</h3>
+                        <p>Get comprehensive information including covers, descriptions, and ratings</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Vast Library</h3>
+                        <p>Access millions of books from Google's extensive digital library</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="color: white; margin-top: 1rem;">Searching for books...</p>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <section class="results" id="results" style="display: none;">
+            <div class="container">
+                <h3 id="resultsTitle">Search Results</h3>
+                <div class="books-grid" id="booksGrid"></div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Book Details</h2>
+            </div>
+            <div class="modal-body">
+                <img id="modalCover" src="" alt="Book Cover" class="modal-cover">
+                <div class="modal-card">
+                    <div class="detail-item">
+                        <span class="detail-label">Title:</span>
+                        <span class="detail-value" id="modalBookTitle"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Author:</span>
+                        <span class="detail-value" id="modalAuthor"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">ISBN:</span>
+                        <span class="detail-value" id="modalISBN"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Genre:</span>
+                        <span class="detail-value" id="modalGenre"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Published:</span>
+                        <span class="detail-value" id="modalPublished"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Rating:</span>
+                        <span class="detail-value" id="modalRating"></span>
+                    </div>
+                </div>
+                <div class="modal-card">
+                    <div class="detail-item">
+                        <span class="detail-label">Pages:</span>
+                        <span class="detail-value" id="modalPages"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Publisher:</span>
+                        <span class="detail-value" id="modalPublisher"></span>
+                    </div>
+                    <div class="detail-item" style="display: block;">
+                        <span class="detail-label">Description:</span>
+                        <div class="detail-value" id="modalDescription" style="margin-top: 0.5rem; line-height: 1.6;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bosco. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/readish.js"></script>
+</body>
+</html>
