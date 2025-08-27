@@ -164,7 +164,7 @@ class BookFinder {
     openModal(book) {
         const volumeInfo = book.volumeInfo || {};
         
-        // Populate modal content
+        // Populate the  modal content
         document.getElementById('modalTitle').textContent = volumeInfo.title || 'Book Details';
         document.getElementById('modalBookTitle').textContent = volumeInfo.title || 'Unknown Title';
         document.getElementById('modalAuthor').textContent = volumeInfo.authors ? volumeInfo.authors.join(', ') : 'Unknown Author';
@@ -190,7 +190,7 @@ class BookFinder {
         document.getElementById('modalPages').textContent = volumeInfo.pageCount || 'Unknown';
         document.getElementById('modalDescription').textContent = this.stripHtml(volumeInfo.description || 'No description available');
         
-        // Cover image
+        // The Cover image
         const coverImg = document.getElementById('modalCover');
         const thumbnail = volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail || volumeInfo.imageLinks?.smallThumbnail;
         if (thumbnail) {
@@ -259,7 +259,7 @@ class BookFinder {
     }
 }
 
-// Initialize the app when DOM is loaded
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new BookFinder();
 });
